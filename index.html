@@ -3,145 +3,158 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>NetvGold V10 — SelcukSports • TrGoals • İnat TV • Canlı Maç İzle HD</title>
-  <meta name="description" content="NetvGold V10 — SelcukSports, TrGoals, İnat TV, NetvGold canlı maç izle, HD maç izle, spor yayın rehberi, dizi izle ve popüler canlı yayın platformları hakkında SEO optimizasyonlu içerik." />
-
-  <meta property="og:title" content="NetvGold V10 — Canlı Maç İzle HD" />
-  <meta property="og:description" content="SelcukSports, TrGoals, İnat TV, NetvGold canlı maç, spor yayını, HD maç izleme rehberi ve dizi izle platformları." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://netvgoldv10.github.io/" />
+  <title>NetvGold V10 — Canlı Maç İzle • HD Yayın • Spor & Dizi</title>
+  <meta name="description" content="NetvGold indir, selcuksports, byiptvpro, inattv, trgoals, taraftarium24, canlı maç izle, hd maç izle, dizi izle platformu." />
 
   <style>
-    body { margin:0; background:#060b12; color:white; font-family:Arial, sans-serif; }
-    header { display:flex; justify-content:space-between; padding:20px; background:#0d1623; box-shadow:0 2px 8px #000; position:sticky; top:0; z-index:10; }
-    nav a { color:#9aa4b2; text-decoration:none; margin-left:20px; font-size:15px; }
-    nav a:hover { color:#fff; }
+    body { 
+      margin:0; 
+      font-family:Arial, sans-serif; 
+      color:#fff; 
+      background: linear-gradient(135deg, #4b4b4b, #1a1a1a); /* Modern gri gradient */
+      overflow-x:hidden;
+      animation: bgAnimation 20s ease infinite;
+      background-size: 400% 400%;
+    }
 
-    .hero { padding:60px 20px; text-align:center; background:linear-gradient(180deg,#0d1623,#060b12); }
-    .hero h1 { font-size:36px; }
-    .hero p { color:#9aa4b2; font-size:17px; }
+    @keyframes bgAnimation {
+      0% { background-position:0% 50%; }
+      50% { background-position:100% 50%; }
+      100% { background-position:0% 50%; }
+    }
 
-    .search-box { margin:30px auto; max-width:500px; display:flex; }
-    .search-box input { flex:1; padding:12px; border-radius:8px 0 0 8px; border:0; background:#111c2c; color:white; }
-    .search-box button { padding:12px 20px; background:#ff3333; border:0; border-radius:0 8px 8px 0; color:white; cursor:pointer; }
+    .social-buttons { display:flex; justify-content:center; gap:20px; margin:35px 0; }
+    .social-buttons a {
+      padding:16px 32px; border-radius:40px; text-decoration:none; font-weight:bold;
+      color:#fff; font-size:16px; transition:0.4s, transform 0.3s, box-shadow 0.3s;
+      box-shadow:0 0 15px rgba(255,255,255,0.3);
+    }
+    .telegram { background:#0088cc; }
+    .telegram:hover { background:#00bfff; box-shadow:0 0 25px #00bfff; transform:translateY(-5px); }
+    .xcom { background:#1da1f2; }
+    .xcom:hover { background:#0d8ddb; box-shadow:0 0 25px #0d8ddb; transform:translateY(-5px); }
 
-    .container { max-width:1300px; margin:auto; padding:20px; }
-    .section-title { font-size:26px; margin-bottom:15px; }
+    .content { max-width:1200px; margin:auto; padding:40px 20px; }
+    .section-title { font-size:32px; margin:35px 0; text-align:center; color:#cccccc; text-shadow:0 2px 12px rgba(0,0,0,0.6); }
 
-    .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(230px,1fr)); gap:18px; }
-    .card { background:#111927; padding:12px; border-radius:12px; box-shadow:0 4px 12px #000; transition:0.3s; }
-    .card:hover { transform:scale(1.03); }
-    .card img { width:100%; height:140px; object-fit:cover; border-radius:8px; }
-    .card h3 { margin:10px 0 4px; }
-    .card p { color:#9aa4b2; font-size:14px; }
+    .grid {
+      display:flex;
+      flex-wrap:wrap;
+      gap:25px;
+      justify-content:center;
+    }
 
-    footer { margin-top:40px; background:#0d1623; padding:25px; text-align:center; color:#9aa4b2; font-size:14px; }
+    .card {
+      position:relative;
+      width:260px;
+      background: rgba(30,30,30,0.9);
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 10px 35px rgba(0,0,0,0.7);
+      transition:0.4s;
+      cursor:pointer;
+      backdrop-filter: blur(6px);
+    }
 
-    /* Chip categories */
-    .chips { display:flex; gap:10px; margin-top:20px; justify-content:center; flex-wrap:wrap; }
-    .chip { padding:8px 18px; background:#111927; border-radius:20px; cursor:pointer; color:#9aa4b2; font-size:14px; }
-    .chip:hover { background:#1a2539; color:#fff; }
+    .card::before {
+      content:'';
+      position:absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      background: linear-gradient(135deg, rgba(200,200,200,0.15), rgba(0,0,0,0.15));
+      opacity:0.6;
+      pointer-events:none;
+      border-radius:20px;
+    }
+
+    .card:hover { transform:scale(1.08); box-shadow:0 18px 45px rgba(200,200,200,0.5), 0 18px 45px rgba(0,0,0,0.5); }
+
+    .card img {
+      width:100%; height:160px; object-fit:cover;
+      display:block;
+      border-bottom:2px solid #cccccc;
+      transition: transform 0.5s;
+    }
+    .card:hover img { transform: scale(1.05); }
+
+    .card .info { padding:20px; position:relative; z-index:2; text-align:center; }
+    .card h3 { margin:0 0 10px; font-size:20px; color:#cccccc; }
+    .card p { margin:0; color:#aaaaaa; font-size:15px; }
+
+    footer { text-align:center; padding:30px; margin-top:50px; background:rgba(25,25,25,0.95); color:#aaaaaa; font-size:14px; box-shadow:0 -3px 10px rgba(0,0,0,0.5); }
   </style>
 </head>
 <body>
 
-<header>
-  <h2>NetvGold V10</h2>
-  <nav>
-    <a href="#selcuksports">SelcukSports</a>
-    <a href="#trgoals">TrGoals</a>
-    <a href="#inat">İnat TV</a>
-    <a href="#netvgold">NetvGold</a>
-  </nav>
-</header>
+<div class="content">
 
-<section class="hero">
-  <h1>SelcukSports • TrGoals • İnat TV • NetvGold Canlı Maç İzle HD</h1>
-  <p>En güncel canlı maç linkleri, spor yayın rehberi ve dizi izleme platformları için tek merkez.</p>
-
-  <div class="search-box">
-    <input placeholder="Örn: selcuksports, trgoals, inat tv…" />
-    <button>Ara</button>
+  <div class="social-buttons">
+    <a href="https://t.me/yourchannel" class="telegram" target="_blank">Telegram'a Katıl</a>
+    <a href="https://x.com/yourprofile" class="xcom" target="_blank">X.com Katıl</a>
   </div>
-
-  <div class="chips">
-    <div class="chip">SelcukSports</div>
-    <div class="chip">TrGoals</div>
-    <div class="chip">İnat TV</div>
-    <div class="chip">NetvGold</div>
-    <div class="chip">HD Maç İzle</div>
-  </div>
-</section>
-
-<div class="container">
 
   <h2 class="section-title">Popüler Yayınlar</h2>
   <div class="grid">
 
-    <div class="card" id="selcuksports">
-      <img src="https://via.placeholder.com/300x150" />
-      <h3>SelcukSports Canlı Yayın</h3>
-      <p>HD canlı maç izle, spor yayın rehberi ve anlık güncellemeler.</p>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64" />
+      <div class="info">
+        <h3>SelçukSports</h3>
+        <p>HD canlı maç izle — en hızlı kaynaklar.</p>
+      </div>
     </div>
 
-    <div class="card" id="trgoals">
-      <img src="https://via.placeholder.com/300x150" />
-      <h3>TrGoals Maç İzle</h3>
-      <p>Super Lig, Şampiyonlar Ligi ve tüm spor yayın programları.</p>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1504643039591-52948e3c5c7b" />
+      <div class="info">
+        <h3>TrGoals</h3>
+        <p>Maç linkleri, canlı yayın ve spor rehberi.</p>
+      </div>
     </div>
 
-    <div class="card" id="inat">
-      <img src="https://via.placeholder.com/300x150" />
-      <h3>İnat TV HD Yayın</h3>
-      <p>Dizi izle, canlı spor yayınları ve program arşivi.</p>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d" />
+      <div class="info">
+        <h3>İnat TV</h3>
+        <p>Dizi izle + spor yayını tek platformda.</p>
+      </div>
     </div>
 
-    <div class="card" id="netvgold">
-      <img src="https://via.placeholder.com/300x150" />
-      <h3>NetvGold Spor</h3>
-      <p>HD yayın merkezi, güncel maç listeleri ve canlı yayın rehberi.</p>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325" />
+      <div class="info">
+        <h3>NetvGold</h3>
+        <p>HD maç izle, canlı spor ve eğlence merkezi.</p>
+      </div>
     </div>
 
   </div>
 
-  <h2 class="section-title">Dizi & Program Önerileri</h2>
+  <h2 class="section-title">Dizi & Eğlence</h2>
   <div class="grid">
+
     <div class="card">
-      <img src="https://via.placeholder.com/300x150" />
-      <h3>En Popüler Diziler</h3>
-      <p>HD dizi izle ve bölüm rehberi.</p>
+      <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4" />
+      <div class="info">
+        <h3>Popüler Diziler</h3>
+        <p>Yeni bölümler ve öneriler.</p>
+      </div>
     </div>
 
     <div class="card">
-      <img src="https://via.placeholder.com/300x150" />
-      <h3>Canlı TV Akışı</h3>
-      <p>Tüm kanalların yayın akışı tek sayfada.</p>
+      <img src="https://images.unsplash.com/photo-1529636798458-8e3f3f1c2c1a" />
+      <div class="info">
+        <h3>Canlı Yayın Akışı</h3>
+        <p>Tüm popüler kanalların yayın saatleri.</p>
+      </div>
     </div>
+
   </div>
-
-  <h2 class="section-title">Sitemap & Robots Bilgisi</h2>
-  <pre style="background:#111927; padding:15px; border-radius:8px; font-size:14px;">
-robots.txt
-----------------------------------
-User-agent: *
-Allow: /
-Sitemap: https://netvgoldv10.github.io/sitemap.xml
-
-sitemap.xml (örnek)
-----------------------------------
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://netvgoldv10.github.io/</loc></url>
-  <url><loc>https://netvgoldv10.github.io/#selcuksports</loc></url>
-  <url><loc>https://netvgoldv10.github.io/#trgoals</loc></url>
-  <url><loc>https://netvgoldv10.github.io/#inat</loc></url>
-  <url><loc>https://netvgoldv10.github.io/#netvgold</loc></url>
-</urlset>
-  </pre>
 
 </div>
 
 <footer>
-  © 2025 NetvGold V10 — Tüm hakları saklıdır.
+  © 2025 NetvGold V10 — Tüm Hakları Saklıdır.
 </footer>
 
 </body>
